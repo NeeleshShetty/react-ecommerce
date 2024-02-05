@@ -56,7 +56,7 @@ export const productsReducer = productsSlice.reducer
 // thunks
 
 export const fetchPoducts = createAsyncThunk('products/fetch', async () => {
-    const res = await fetch("https://my-json-server.typicode.com/akashpadampalle/FakeApi/products/")
+    const res = await fetch("https://my-json-server.typicode.com/NeeleshShetty/Fake-api/products/")
     const data = await res.json()
     return data
 })
@@ -70,7 +70,7 @@ export const addProduct = createAsyncThunk("products/add", async (product, { dis
     try {
 
         await fetch(
-            "https://my-json-server.typicode.com/akashpadampalle/FakeApi/products/",
+            "https://my-json-server.typicode.com/NeeleshShetty/Fake-api/products/",
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -101,7 +101,7 @@ export const updateProduct = createAsyncThunk("products/update", async (product,
 
     try{
         await fetch(
-            `https://my-json-server.typicode.com/akashpadampalle/FakeApi/products/${id}`,
+            `https://my-json-server.typicode.com/NeeleshShetty/Fake-api/products/${id}`,
             {
                 method: "PATCH",
                 headers: { "Content-type": "application/json" },
@@ -128,7 +128,7 @@ export const deleteProduct = createAsyncThunk("products/delete", async (id, { ge
 
     try {
         await fetch(
-            `https://my-json-server.typicode.com/akashpadampalle/FakeApi/products/${id}`,
+            `https://my-json-server.typicode.com/NeeleshShetty/Fake-api/products/${id}`,
             { method: "DELETE" }
         )
         successToast("product delete.")
